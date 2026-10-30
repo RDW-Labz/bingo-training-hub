@@ -56,7 +56,6 @@ export function LessonDetail({ lessonId, onBack }: Props) {
     (acc, q, i) => acc + (answers[i] === q.answer_index ? 1 : 0),
     0
   );
-  const quizPassed = quizScore >= (lesson?.passing_score ?? 1);
   const needsPractical = lesson?.requires_practical ?? false;
 
   async function submitQuiz() {

@@ -12,10 +12,8 @@ import {
   Pencil,
   Trash2,
   X,
-  ChevronDown,
   Briefcase,
   MapPin,
-  User,
   Search,
 } from 'lucide-react';
 import { StatusBadge, ProgressRing, QuizResultIcon } from '@/components/ui/Status';
@@ -79,7 +77,7 @@ export function ManagerDashboard() {
       ) : tab === 'lessons' ? (
         <LessonsManager onChanged={loadAll} />
       ) : (
-        <AssignmentsManager lessons={null} profiles={employees} onChanged={loadAll} />
+        <AssignmentsManager profiles={employees} onChanged={loadAll} />
       )}
     </div>
   );
@@ -875,11 +873,9 @@ function CategoriesManager({
 // ============ ASSIGNMENTS MANAGER ============
 
 function AssignmentsManager({
-  lessons,
   profiles,
   onChanged,
 }: {
-  lessons: null;
   profiles: Profile[];
   onChanged: () => void;
 }) {
