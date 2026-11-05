@@ -1,6 +1,7 @@
 node_modules
 dist
 dist-ssr
+dist-preview
 *.local
 
 # Environment files
@@ -10,3 +11,6 @@ dist-ssr
 
 # Supabase CLI
 supabase/.temp/
+
+*.log
+.DS_Store
