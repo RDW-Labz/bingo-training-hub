@@ -41,6 +41,8 @@ export interface Lesson {
   created_at: string;
 }
 
+export type LessonInput = Omit<Lesson, 'id' | 'version' | 'created_at'>;
+
 export interface Assignment {
   id: string;
   lesson_id: string;
@@ -51,6 +53,8 @@ export interface Assignment {
   due_date: string | null;
   created_at: string;
 }
+
+export type AssignmentInput = Pick<Assignment, 'lesson_id' | 'assignee_id' | 'job_title' | 'location' | 'due_date'>;
 
 export interface LessonProgress {
   id: string;
